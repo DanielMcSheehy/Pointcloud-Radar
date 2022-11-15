@@ -1,11 +1,7 @@
 streamlit
 numpy
-base64
-json
-time
 psutil
 pandas
-math
 cv2
 plotly.express
 plotly.graph_objects
