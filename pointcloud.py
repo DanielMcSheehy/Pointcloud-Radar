@@ -7,7 +7,6 @@ import time
 import psutil
 from plotly.subplots import make_subplots
 import math
-import cv2
 import plotly.express as px
 import time
 import plotly.graph_objects as go

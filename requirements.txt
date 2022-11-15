@@ -3,4 +3,3 @@ numpy
 psutil
 pandas
 plotly
-cv2
