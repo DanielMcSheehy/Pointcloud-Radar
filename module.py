@@ -6,7 +6,6 @@ import json
 import time
 import psutil
 import math
-from formant.sdk.cloud.v1 import Client as FormantClient
 import plotly.graph_objects as go
 import cv2
 import plotly.express as px

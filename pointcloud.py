@@ -7,8 +7,6 @@ import time
 import psutil
 from plotly.subplots import make_subplots
 import math
-from formant.sdk.cloud.v1 import Client as FormantClient
-import plotly.graph_objects as go
 import cv2
 import plotly.express as px
 import time
@@ -39,7 +37,6 @@ for item in result:
 
 
 camera = dict(
-    # eye=dict(x=math.sin(angle), y=math.cos(angle), z=0),
     center=dict(x=0, y=0, z=0),
     eye=dict(x=0, y=0, z=0)
 )
