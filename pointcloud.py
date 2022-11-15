@@ -11,6 +11,7 @@ import cv2
 import plotly.express as px
 import time
 import plotly.graph_objects as go
+from module import start_sunburst_and_ice_plots
 
 
 stack = make_subplots(rows=1, cols=2, specs=[[{"type": "scatter3d"}, {"type": "barpolar"}]])
@@ -38,7 +39,7 @@ for item in result:
 
 camera = dict(
     center=dict(x=0, y=0, z=0),
-    eye=dict(x=0, y=0, z=0)
+    eye=dict(x=1, y=1, z=0)
 )
 
 steps = []
@@ -56,15 +57,13 @@ for i in range(0, 180):
     ))
 
 sliders = [dict(
-    active=0,
+    active=42,
     currentvalue={"prefix": "Degrees:"},
     pad={"t": 0},
     steps=steps
 )]
 
 name = 'Radar point cloud'
-
-print(pointsWithinDegrees)
 
 fig = make_subplots(rows=1, cols=2, specs=[[{"type": "scatter3d"}, {"type": "polar"}]])
 fig.add_trace(go.Scatter3d(
@@ -152,4 +151,6 @@ fig.update_layout(scene_camera=camera, scene_dragmode='orbit', title=name, slide
                      scene_yaxis = dict(nticks=1, range=[0,10], showgrid=False))
 
 st.plotly_chart(fig, use_container_width=True)
+
+start_sunburst_and_ice_plots()
 

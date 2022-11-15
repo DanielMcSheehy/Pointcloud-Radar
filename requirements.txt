@@ -1,8 +1,5 @@
-streamlit
+# streamlit
 numpy
 psutil
 pandas
 plotly
-# plotly.express
-# plotly.graph_objects
-# plotly.subplots
